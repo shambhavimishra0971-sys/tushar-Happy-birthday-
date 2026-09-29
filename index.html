@@ -3,109 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Jaanuu 💗</title>
+
+<title>For My Jaanuu 💗</title>
 
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  font-family: Georgia, serif;
-  background: linear-gradient(135deg, #ffd6e8, #e8d5ff);
-  color: #4b294f;
-  min-height: 100vh;
-  overflow-x: hidden;
+body{
+  min-height:100vh;
+  font-family:Georgia,serif;
+  color:#54294f;
+  overflow-x:hidden;
+  background:
+    radial-gradient(circle at 20% 20%,#fff 0 3%,transparent 4%),
+    linear-gradient(135deg,#ffd9eb,#ead8ff,#ffe4f1);
 }
 
-.page {
-  min-height: 100vh;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  text-align: center;
+.page{
+  min-height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:25px 16px;
+  position:relative;
+  overflow:hidden;
 }
 
-.page.active {
-  display: flex;
+.page.active{
+  display:flex;
+  animation:fadeIn .8s ease;
 }
 
-.card {
-  width: 100%;
-  max-width: 650px;
-  background: rgba(255,255,255,0.82);
-  padding: 35px 25px;
-  border-radius: 28px;
-  box-shadow: 0 10px 35px rgba(91,48,100,0.18);
-  backdrop-filter: blur(8px);
+@keyframes fadeIn{
+  from{opacity:0;transform:scale(.96)}
+  to{opacity:1;transform:scale(1)}
 }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 18px;
+.card{
+  width:100%;
+  max-width:650px;
+  padding:35px 25px;
+  text-align:center;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(255,255,255,.8);
+  border-radius:32px;
+  box-shadow:0 20px 60px rgba(100,45,100,.18);
+  backdrop-filter:blur(12px);
+  position:relative;
+  z-index:5;
 }
 
-h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
+h1{
+  font-size:42px;
+  line-height:1.15;
+  margin-bottom:18px;
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin: 12px 0;
+h2{
+  font-size:30px;
+  margin-bottom:18px;
 }
 
-button {
-  border: none;
-  padding: 13px 25px;
-  border-radius: 30px;
-  background: #a855f7;
-  color: white;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
+p{
+  font-size:18px;
+  line-height:1.7;
+  margin:12px 0;
 }
 
-button:hover {
-  background: #9333ea;
+.highlight{
+  color:#a33b91;
+  font-weight:bold;
 }
 
-.heart {
-  font-size: 55px;
-  animation: beat 1s infinite;
-  margin-bottom: 15px;
+.heart{
+  font-size:65px;
+  animation:heartbeat 1.2s infinite;
+  margin-bottom:10px;
 }
 
-@keyframes beat {
-  50% {
-    transform: scale(1.15);
-  }
+@keyframes heartbeat{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.18)}
 }
 
-.photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 15px auto;
-  display: block;
-  border: 6px solid white;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+button{
+  border:0;
+  padding:14px 25px;
+  border-radius:30px;
+  margin:12px 5px 0;
+  background:linear-gradient(135deg,#c05cf2,#9b45dc);
+  color:white;
+  font-size:16px;
+  font-family:Georgia,serif;
+  box-shadow:0 8px 20px rgba(150,70,200,.25);
+  cursor:pointer;
 }
 
-.small {
-  font-size: 15px;
-  opacity: 0.75;
+button:active{
+  transform:scale(.95);
 }
 
-.signature {
-  margin-top: 25px;
-  font-size: 20px;
-  font-style: italic;
+.photo{
+  width:180px;
+  height:180px;
+  object-fit:cover;
+  border-radius:25px;
+  border:6px solid white;
+  box-shadow:0 10px 30px rgba(80,30,80,.2);
+  margin:10px;
+}
+
+.photos{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.date{
+  font-size:27px;
+  color:#9a3e91;
+  font-weight:bold;
+  margin:15px;
+}
+
+.small{
+  font-size:14px;
+  opacity:.7;
+}
+
+.signature{
+  font-size:21px;
+  font-style:italic;
+  margin-top:25px;
+}
+
+.music{
+  position:fixed;
+  right:15px;
+  top:15px;
+  z-index:20;
+  padding:10px 15px;
+  font-size:14px;
+  background:rgba(120,50,150,.9);
+}
+
+.float{
+  position:absolute;
+  font-size:25px;
+  animation:float 7s linear infinite;
+  opacity:.7;
+}
+
+.f1{left:8%;bottom:-40px}
+.f2{left:30%;bottom:-40px;animation-delay:2s}
+.f3{right:25%;bottom:-40px;animation-delay:4s}
+.f4{right:8%;bottom:-40px;animation-delay:1s}
+
+@keyframes float{
+  0%{transform:translateY(0) rotate(0deg);opacity:0}
+  20%{opacity:.8}
+  100%{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+.line{
+  width:70px;
+  height:3px;
+  background:#d58bd0;
+  margin:18px auto;
+  border-radius:5px;
+}
+
+.big-date{
+  font-size:55px;
+  font-weight:bold;
+  color:#9a3e91;
+  margin:15px 0;
+}
+
+.note{
+  background:rgba(255,220,241,.55);
+  border-radius:22px;
+  padding:18px;
+  margin:20px 0;
 }
 
 </style>
@@ -113,124 +196,256 @@ button:hover {
 
 <body>
 
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music" onclick="toggleMusic()">🎵 Music ON</button>
+
+
+<!-- FLOATING DECORATIONS -->
+<div class="float f1">💗</div>
+<div class="float f2">✨</div>
+<div class="float f3">🌸</div>
+<div class="float f4">💜</div>
+
+
 <!-- PAGE 1 -->
 <section class="page active" id="page1">
-  <div class="card">
-    <div class="heart">💗</div>
 
-    <h1>Happy Birthday<br>Jaanuu 🥹</h1>
+<div class="card">
 
-    <p>
-      Aaj ka din thoda sa extra special hai...
-      kyunki aaj <b>tumhara birthday</b> hai. ✨
-    </p>
+<div class="heart">💗</div>
 
-    <button onclick="nextPage(2)">Tap to open 💌</button>
-  </div>
+<h1>
+Happy Birthday<br>
+<span class="highlight">Jaanuu 🥹</span>
+</h1>
+
+<div class="line"></div>
+
+<p>
+Aaj ka din ordinary nahi hai...
+</p>
+
+<p>
+because today is the day
+<span class="highlight">you were born. ✨</span>
+</p>
+
+<button onclick="startMusic();nextPage(2)">
+Tap to open 💌
+</button>
+
+</div>
 </section>
 
 
 <!-- PAGE 2 -->
 <section class="page" id="page2">
-  <div class="card">
 
-    <h2>For My Jaanuu 💗</h2>
+<div class="card">
 
-    <!-- PHOTO LAGANE KE LIYE -->
-    <!-- Baad mein photo ka naam yahan change karna -->
-    <img src="photo.jpg" class="photo" alt="Our photo">
+<h2>For My Tushuu 💗</h2>
 
-    <p>
-      Tushuu... Jaanuu... Panuu... 🥹💗
-    </p>
+<div class="photos">
 
-    <p>
-      Kuch log life mein bas aate nahi,
-      balki life ko thoda aur beautiful bana dete hain.
-    </p>
+<img src="photo1.jpg" class="photo" alt="Photo 1">
 
-    <button onclick="nextPage(3)">Next 💕</button>
-  </div>
+<img src="photo2.jpg" class="photo" alt="Photo 2">
+
+</div>
+
+<div class="line"></div>
+
+<p>
+Tushuu... Jaanuu... Panuu... 🥹
+</p>
+
+<p>
+Some people simply enter our lives,
+but some people make our lives
+feel a little more special.
+</p>
+
+<p class="highlight">
+And you are one of those people. 💗
+</p>
+
+<button onclick="nextPage(3)">
+Keep going ✨
+</button>
+
+</div>
 </section>
 
 
 <!-- PAGE 3 -->
 <section class="page" id="page3">
-  <div class="card">
 
-    <div class="heart">🎂</div>
+<div class="card">
 
-    <h2>05 October ✨</h2>
+<div class="heart">🎂</div>
 
-    <p>
-      Tumhare birthday par bas itna sa wish hai...
-    </p>
+<p class="small">THE SPECIAL DAY</p>
 
-    <p>
-      May you always smile,
-      achieve everything you dream about,
-      and always have reasons to be happy. 💗
-    </p>
+<div class="big-date">
+05 October
+</div>
 
-    <p>
-      Aur haan...
-      <br>
-      <b>Never forget how special you are.</b> 🫶
-    </p>
+<div class="line"></div>
 
-    <button onclick="nextPage(4)">One last thing 💌</button>
-  </div>
+<div class="note">
+
+<p>
+May your days always be filled with
+little reasons to smile. 🌸
+</p>
+
+<p>
+May you get everything you quietly
+wish for. ✨
+</p>
+
+<p>
+And may you always remember
+how loved and special you are. 🫶
+</p>
+
+</div>
+
+<button onclick="nextPage(4)">
+One more thing 💌
+</button>
+
+</div>
 </section>
 
 
 <!-- PAGE 4 -->
 <section class="page" id="page4">
-  <div class="card">
 
-    <div class="heart">🫶</div>
+<div class="card">
 
-    <h1>Happy Birthday<br>Jaanuu 💗</h1>
+<div class="heart">🫶</div>
 
-    <p>
-      I hope this little website made you smile. 🥹
-    </p>
+<h2>A Little Message</h2>
 
-    <p>
-      Keep smiling, keep shining,
-      and keep being you. ✨
-    </p>
+<div class="line"></div>
 
-    <p class="signature">
-      — Yours 💗
-    </p>
+<p>
+I don't need a perfect reason
+to wish you happiness.
+</p>
 
-    <p class="small">
-      Made with lots of love &amp; little memories ✨
-    </p>
+<p>
+I just hope that whenever life
+gets difficult, you still find
+something that makes you smile.
+</p>
 
-    <button onclick="nextPage(1)">Replay 🔄</button>
+<p class="highlight">
+Keep smiling. Keep shining.
+Keep being you. 💗
+</p>
 
-  </div>
+<button onclick="nextPage(5)">
+Final surprise 🎀
+</button>
+
+</div>
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page" id="page5">
+
+<div class="card">
+
+<div class="heart">💗</div>
+
+<h1>
+Happy Birthday<br>
+Jaanuu!
+</h1>
+
+<div class="line"></div>
+
+<p>
+I hope this tiny little website
+made you smile even for a moment. 🥹
+</p>
+
+<p>
+Because you deserve all the
+beautiful little moments in life.
+✨🌸💗
+</p>
+
+<p class="signature">
+— With lots of love 💌
+</p>
+
+<p class="small">
+Made especially for you • 05 October
+</p>
+
+<button onclick="nextPage(1)">
+Replay 🔄
+</button>
+
+</div>
 </section>
 
 
 <script>
 
-function nextPage(number) {
+function nextPage(number){
 
-  document.querySelectorAll(".page").forEach(function(page) {
-    page.classList.remove("active");
-  });
+document.querySelectorAll(".page").forEach(function(page){
+page.classList.remove("active");
+});
 
-  document.getElementById("page" + number).classList.add("active");
+document.getElementById("page"+number).classList.add("active");
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+
+function startMusic(){
+
+let music=document.getElementById("music");
+
+music.play().catch(function(){
+console.log("Music needs user interaction.");
+});
+}
+
+
+function toggleMusic(){
+
+let music=document.getElementById("music");
+let button=document.querySelector(".music");
+
+if(music.paused){
+
+music.play();
+button.innerHTML="🔊 Music ON";
+
+}else{
+
+music.pause();
+button.innerHTML="🔇 Music OFF";
+
+}
+
 }
 
 </script>
 
 </body>
-</html>
+  </html>
