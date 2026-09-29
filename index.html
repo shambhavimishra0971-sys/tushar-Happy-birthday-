@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jaanuu 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg, #ffd6e8, #e8d5ff);
+  color: #4b294f;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  min-height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.page.active {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255,255,255,0.82);
+  padding: 35px 25px;
+  border-radius: 28px;
+  box-shadow: 0 10px 35px rgba(91,48,100,0.18);
+  backdrop-filter: blur(8px);
+}
+
+h1 {
+  font-size: 42px;
+  margin-bottom: 18px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+button {
+  border: none;
+  padding: 13px 25px;
+  border-radius: 30px;
+  background: #a855f7;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #9333ea;
+}
+
+.heart {
+  font-size: 55px;
+  animation: beat 1s infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes beat {
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 15px auto;
+  display: block;
+  border: 6px solid white;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.small {
+  font-size: 15px;
+  opacity: 0.75;
+}
+
+.signature {
+  margin-top: 25px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<section class="page active" id="page1">
+  <div class="card">
+    <div class="heart">💗</div>
+
+    <h1>Happy Birthday<br>Jaanuu 🥹</h1>
+
+    <p>
+      Aaj ka din thoda sa extra special hai...
+      kyunki aaj <b>tumhara birthday</b> hai. ✨
+    </p>
+
+    <button onclick="nextPage(2)">Tap to open 💌</button>
+  </div>
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page" id="page2">
+  <div class="card">
+
+    <h2>For My Jaanuu 💗</h2>
+
+    <!-- PHOTO LAGANE KE LIYE -->
+    <!-- Baad mein photo ka naam yahan change karna -->
+    <img src="photo.jpg" class="photo" alt="Our photo">
+
+    <p>
+      Tushuu... Jaanuu... Panuu... 🥹💗
+    </p>
+
+    <p>
+      Kuch log life mein bas aate nahi,
+      balki life ko thoda aur beautiful bana dete hain.
+    </p>
+
+    <button onclick="nextPage(3)">Next 💕</button>
+  </div>
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page" id="page3">
+  <div class="card">
+
+    <div class="heart">🎂</div>
+
+    <h2>05 October ✨</h2>
+
+    <p>
+      Tumhare birthday par bas itna sa wish hai...
+    </p>
+
+    <p>
+      May you always smile,
+      achieve everything you dream about,
+      and always have reasons to be happy. 💗
+    </p>
+
+    <p>
+      Aur haan...
+      <br>
+      <b>Never forget how special you are.</b> 🫶
+    </p>
+
+    <button onclick="nextPage(4)">One last thing 💌</button>
+  </div>
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page" id="page4">
+  <div class="card">
+
+    <div class="heart">🫶</div>
+
+    <h1>Happy Birthday<br>Jaanuu 💗</h1>
+
+    <p>
+      I hope this little website made you smile. 🥹
+    </p>
+
+    <p>
+      Keep smiling, keep shining,
+      and keep being you. ✨
+    </p>
+
+    <p class="signature">
+      — Yours 💗
+    </p>
+
+    <p class="small">
+      Made with lots of love &amp; little memories ✨
+    </p>
+
+    <button onclick="nextPage(1)">Replay 🔄</button>
+
+  </div>
+</section>
+
+
+<script>
+
+function nextPage(number) {
+
+  document.querySelectorAll(".page").forEach(function(page) {
+    page.classList.remove("active");
+  });
+
+  document.getElementById("page" + number).classList.add("active");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+</script>
+
+</body>
+</html>
